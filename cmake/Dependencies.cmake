@@ -16,4 +16,4 @@ find_package(fmt 9.1.0 REQUIRED)
 
 # Boost
 set(Boost_NO_BOOST_CMAKE)
-find_package(Boost 1.81.0 COMPONENTS system filesystem program_options json REQUIRED)
+find_package(Boost 1.81.0 COMPONENTS system filesystem program_options json unit_test_framework REQUIRED)

@@ -17,3 +17,12 @@ add_rhapseody_library(
   INCLUDE_DIRS
     include
 )
+
+add_rhapseody_utest(
+  TARGET rhapseody_u_basic
+  SOURCES
+    tests/rhapseody_u_basic.cpp
+  LIBRARIES
+    rhapseody
+    Boost::unit_test_framework
+)
