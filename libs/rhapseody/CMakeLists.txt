@@ -8,3 +8,12 @@
 #
 ##
 
+add_rhapseody_library(
+  TARGET rhapseody
+  HEADERS
+    include/rhapseody.hpp
+  SOURCES
+    src/rhapseody.cpp
+  INCLUDE_DIRS
+    include
+)
