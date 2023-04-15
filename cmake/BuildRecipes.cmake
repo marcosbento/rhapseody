@@ -18,8 +18,8 @@ function(add_rhapseody_library)
   add_library(${ARGS_TARGET} SHARED)
 
   target_sources(${ARGS_TARGET}
-    PUBLIC
-      ${ARGS_HEADERS}
+    PUBLIC FILE_SET HEADERS BASE_DIRS include
+      FILES ${ARGS_HEADERS}
     PRIVATE
       ${ARGS_SOURCES})
 
@@ -42,6 +42,9 @@ function(add_rhapseody_library)
   install(
     TARGETS ${ARGS_TARGET}
     DESTINATION lib)
+  install(
+    TARGETS ${ARGS_TARGET}
+    FILE_SET HEADERS)
 
 endfunction()
 
