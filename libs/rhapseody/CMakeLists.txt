@@ -21,7 +21,7 @@ add_rhapseody_library(
 add_rhapseody_utest(
   TARGET rhapseody_u_basic
   SOURCES
-    tests/rhapseody_u_basic.cpp
+    test/rhapseody_u_basic.cpp
   LIBRARIES
     rhapseody
     Boost::unit_test_framework
