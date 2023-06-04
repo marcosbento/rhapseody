@@ -18,7 +18,7 @@ BOOST_AUTO_TEST_CASE(use_instant_in_tai)
   using rhapseody::chrono::Microsecond;
   using rhapseody::chrono::Millisecond;
   using rhapseody::chrono::Nanosecond;
-  using rhapseody::chrono::Seconds;
+  using rhapseody::chrono::Second;
 
   InstantTAI reference;
   BOOST_CHECK(reference.since_reference() == Nanosecond(0));
@@ -32,7 +32,7 @@ BOOST_AUTO_TEST_CASE(use_instant_in_tai)
   BOOST_CHECK(instant.since_reference() == Nanosecond(1000));
   instant = reference + Millisecond(1);
   BOOST_CHECK(instant.since_reference() == Nanosecond(1000000));
-  instant = reference + Seconds(1);
+  instant = reference + Second(1);
   BOOST_CHECK(instant.since_reference() == Nanosecond(1000000000));
 
   instant = reference - Nanosecond(1);
@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_CASE(use_instant_in_tai)
   BOOST_CHECK(instant.since_reference() == Nanosecond(-1000));
   instant = reference - Millisecond(1);
   BOOST_CHECK(instant.since_reference() == Nanosecond(-1000000));
-  instant = reference - Seconds(1);
+  instant = reference - Second(1);
   BOOST_CHECK(instant.since_reference() == Nanosecond(-1000000000));
 }
 
@@ -58,13 +58,13 @@ BOOST_AUTO_TEST_CASE(use_instant_in_tai_to_convert_to_others)
   using rhapseody::chrono::Microsecond;
   using rhapseody::chrono::Millisecond;
   using rhapseody::chrono::Nanosecond;
-  using rhapseody::chrono::Seconds;
+  using rhapseody::chrono::Second;
   using rhapseody::chrono::Time;
 
   auto tai = Nanosecond(0);
-  auto utc = tai - Seconds(32);
+  auto utc = tai - Second(32);
   auto ut1 = utc - Millisecond(4);  // Warning: This ignores Earth Rotation parameters
-  auto gps = tai - Seconds(19);
+  auto gps = tai - Second(19);
 
   Time time(tai, utc, ut1, gps);
 
@@ -95,13 +95,13 @@ BOOST_AUTO_TEST_CASE(use_instant_to_convert_between_all_supported_time_standards
   using rhapseody::chrono::Microsecond;
   using rhapseody::chrono::Millisecond;
   using rhapseody::chrono::Nanosecond;
-  using rhapseody::chrono::Seconds;
+  using rhapseody::chrono::Second;
   using rhapseody::chrono::Time;
 
   auto tai = Nanosecond(0);
-  auto utc = tai - Seconds(32);
+  auto utc = tai - Second(32);
   auto ut1 = utc - Millisecond(4);
-  auto gps = tai - Seconds(19);
+  auto gps = tai - Second(19);
   Time time(tai, utc, ut1, gps);
 
   {

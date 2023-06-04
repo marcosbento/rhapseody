@@ -106,7 +106,7 @@ using Picossecond  = Duration<default_duration_counter_t, Pico>;
 using Nanosecond   = Duration<default_duration_counter_t, Nano>;
 using Microsecond  = Duration<default_duration_counter_t, Micro>;
 using Millisecond  = Duration<default_duration_counter_t, Milli>;
-using Seconds      = Duration<default_duration_counter_t, Ratio<1LL>>;
+using Second       = Duration<default_duration_counter_t, Ratio<1LL>>;
 
 }  // namespace rhapseody::chrono
 
