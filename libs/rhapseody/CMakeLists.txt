@@ -12,6 +12,7 @@ add_rhapseody_library(
   TARGET rhapseody
   HEADERS
     include/rhapseody.hpp
+    include/rhapseody/chrono/Duration.hpp
     include/rhapseody/chrono/Ratio.hpp
     include/rhapseody/exception/Exceptions.hpp
   SOURCES
@@ -21,6 +22,7 @@ add_rhapseody_library(
     include
   LIBRARIES
     fmt::fmt
+    Boost::boost
 )
 
 add_rhapseody_utest(
