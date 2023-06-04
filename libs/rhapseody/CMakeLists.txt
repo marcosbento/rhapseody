@@ -13,11 +13,13 @@ add_rhapseody_library(
   HEADERS
     include/rhapseody.hpp
     include/rhapseody/chrono/Duration.hpp
+    include/rhapseody/chrono/Instant.hpp
     include/rhapseody/chrono/Ratio.hpp
     include/rhapseody/exception/Exceptions.hpp
   SOURCES
     src/rhapseody.cpp
     src/rhapseody/exception/Exceptions.cpp
+    src/rhapseody/chrono/Instant.cpp
   INCLUDE_DIRS
     include
   LIBRARIES
@@ -29,6 +31,7 @@ add_rhapseody_utest(
   TARGET rhapseody_ut
   SOURCES
     test/rhapseody_ut.cpp # provides main()
+    test/rhapseody_ut_chrono_instant.cpp
     test/rhapseody_ut_exceptions.cpp
   LIBRARIES
     rhapseody
