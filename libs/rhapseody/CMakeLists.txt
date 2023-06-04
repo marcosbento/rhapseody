@@ -12,16 +12,21 @@ add_rhapseody_library(
   TARGET rhapseody
   HEADERS
     include/rhapseody.hpp
+    include/rhapseody/exception/Exceptions.hpp
   SOURCES
     src/rhapseody.cpp
+    src/rhapseody/exception/Exceptions.cpp
   INCLUDE_DIRS
     include
+  LIBRARIES
+    fmt::fmt
 )
 
 add_rhapseody_utest(
-  TARGET rhapseody_u_basic
+  TARGET rhapseody_ut
   SOURCES
-    test/rhapseody_u_basic.cpp
+    test/rhapseody_ut.cpp # provides main()
+    test/rhapseody_ut_exceptions.cpp
   LIBRARIES
     rhapseody
     Boost::unit_test_framework

@@ -8,10 +8,5 @@
  *
  **/
 
-#include <rhapseody.hpp>
-
-#include <cstdlib>
-
-int main() {
-    return EXIT_SUCCESS;
-}
+#define BOOST_TEST_MODULE rhapseody_ut
+#include <boost/test/unit_test.hpp>
