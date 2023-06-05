@@ -11,13 +11,10 @@
 #ifndef RHAPSEODY_CHRONO_INSTANT_HPP
 #define RHAPSEODY_CHRONO_INSTANT_HPP
 
-#include <fmt/ostream.h>
-
-#include <chrono>
-#include <vector>
-
 #include <rhapseody/chrono/Duration.hpp>
 #include <rhapseody/chrono/Ratio.hpp>
+
+#include <vector>
 
 namespace rhapseody::chrono
 {

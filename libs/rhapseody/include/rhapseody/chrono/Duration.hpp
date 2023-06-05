@@ -11,7 +11,7 @@
 #ifndef RHAPSEODY_CHRONO_DURATION_HPP
 #define RHAPSEODY_CHRONO_DURATION_HPP
 
-#include "Ratio.hpp"
+#include <rhapseody/chrono/Ratio.hpp>
 
 #include <boost/multiprecision/cpp_int.hpp>
 
